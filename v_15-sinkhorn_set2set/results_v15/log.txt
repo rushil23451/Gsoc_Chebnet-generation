@@ -1,0 +1,232 @@
+=== Pipeline V5 Model15: SpatialSet2Set + NO bottleneck + (SlotDecoder+self-attention) + Sinkhorn ===
+
+Device: cuda
+GPU: NVIDIA A100-SXM4-40GB
+
+======================================================================
+PIPELINE V5 MODEL 15: SpatialSet2Set + SlotDecoder + Flow(512) + Sinkhorn(p=1)
+======================================================================
+
+Loading JetNet from /pscratch/sd/r/rushil13/jetnet_data (auto-downloads if missing)
+  g: 124076 jets
+  q: 119475 jets
+  t: 124561 jets
+Loading graph cache from /pscratch/sd/r/rushil13/gsoc_rushil/results_v15/weights/graph_cache.pkl ...
+  Loaded 368112 graphs from cache.
+Found trained AE weights — loading, skipping training.
+Extracting encoder latents for flow training...
+Latents shape: (368112, 512)
+Latents normalised.
+Jet types: g=124076  q=119475  t=124561
+
+=== Flow Matching | emb_dim=512 | epochs 0→1000 | 180 batches ===
+Flow Epoch   10/1000 | loss=0.665210 | LR=1.00e-04
+  [flow] Checkpoint saved at epoch 10
+Flow Epoch   20/1000 | loss=0.591027 | LR=9.99e-05
+  [flow] Checkpoint saved at epoch 20
+Flow Epoch   30/1000 | loss=0.554578 | LR=9.98e-05
+  [flow] Checkpoint saved at epoch 30
+Flow Epoch   40/1000 | loss=0.534434 | LR=9.96e-05
+  [flow] Checkpoint saved at epoch 40
+Flow Epoch   50/1000 | loss=0.519176 | LR=9.94e-05
+  [flow] Checkpoint saved at epoch 50
+Flow Epoch   60/1000 | loss=0.507676 | LR=9.91e-05
+  [flow] Checkpoint saved at epoch 60
+Flow Epoch   70/1000 | loss=0.498373 | LR=9.88e-05
+  [flow] Checkpoint saved at epoch 70
+Flow Epoch   80/1000 | loss=0.492086 | LR=9.84e-05
+  [flow] Checkpoint saved at epoch 80
+Flow Epoch   90/1000 | loss=0.485457 | LR=9.80e-05
+  [flow] Checkpoint saved at epoch 90
+Flow Epoch  100/1000 | loss=0.480046 | LR=9.76e-05
+  [flow] Checkpoint saved at epoch 100
+Flow Epoch  110/1000 | loss=0.475147 | LR=9.71e-05
+  [flow] Checkpoint saved at epoch 110
+Flow Epoch  120/1000 | loss=0.471540 | LR=9.65e-05
+  [flow] Checkpoint saved at epoch 120
+Flow Epoch  130/1000 | loss=0.468234 | LR=9.59e-05
+  [flow] Checkpoint saved at epoch 130
+Flow Epoch  140/1000 | loss=0.464430 | LR=9.53e-05
+  [flow] Checkpoint saved at epoch 140
+Flow Epoch  150/1000 | loss=0.461953 | LR=9.46e-05
+  [flow] Checkpoint saved at epoch 150
+Flow Epoch  160/1000 | loss=0.459072 | LR=9.39e-05
+  [flow] Checkpoint saved at epoch 160
+Flow Epoch  170/1000 | loss=0.456088 | LR=9.31e-05
+  [flow] Checkpoint saved at epoch 170
+Flow Epoch  180/1000 | loss=0.454813 | LR=9.23e-05
+  [flow] Checkpoint saved at epoch 180
+Flow Epoch  190/1000 | loss=0.452774 | LR=9.14e-05
+  [flow] Checkpoint saved at epoch 190
+Flow Epoch  200/1000 | loss=0.450360 | LR=9.05e-05
+  [flow] Checkpoint saved at epoch 200
+Flow Epoch  210/1000 | loss=0.449357 | LR=8.96e-05
+  [flow] Checkpoint saved at epoch 210
+Flow Epoch  220/1000 | loss=0.447140 | LR=8.86e-05
+  [flow] Checkpoint saved at epoch 220
+Flow Epoch  230/1000 | loss=0.444789 | LR=8.76e-05
+  [flow] Checkpoint saved at epoch 230
+Flow Epoch  240/1000 | loss=0.442878 | LR=8.66e-05
+  [flow] Checkpoint saved at epoch 240
+Flow Epoch  250/1000 | loss=0.442269 | LR=8.55e-05
+  [flow] Checkpoint saved at epoch 250
+Flow Epoch  260/1000 | loss=0.441163 | LR=8.44e-05
+  [flow] Checkpoint saved at epoch 260
+Flow Epoch  270/1000 | loss=0.440062 | LR=8.32e-05
+  [flow] Checkpoint saved at epoch 270
+Flow Epoch  280/1000 | loss=0.438531 | LR=8.21e-05
+  [flow] Checkpoint saved at epoch 280
+Flow Epoch  290/1000 | loss=0.436728 | LR=8.08e-05
+  [flow] Checkpoint saved at epoch 290
+Flow Epoch  300/1000 | loss=0.436530 | LR=7.96e-05
+  [flow] Checkpoint saved at epoch 300
+Flow Epoch  310/1000 | loss=0.435370 | LR=7.83e-05
+  [flow] Checkpoint saved at epoch 310
+Flow Epoch  320/1000 | loss=0.434144 | LR=7.70e-05
+  [flow] Checkpoint saved at epoch 320
+Flow Epoch  330/1000 | loss=0.433025 | LR=7.57e-05
+  [flow] Checkpoint saved at epoch 330
+Flow Epoch  340/1000 | loss=0.431682 | LR=7.43e-05
+  [flow] Checkpoint saved at epoch 340
+Flow Epoch  350/1000 | loss=0.431279 | LR=7.30e-05
+  [flow] Checkpoint saved at epoch 350
+Flow Epoch  360/1000 | loss=0.430195 | LR=7.16e-05
+  [flow] Checkpoint saved at epoch 360
+Flow Epoch  370/1000 | loss=0.429099 | LR=7.02e-05
+  [flow] Checkpoint saved at epoch 370
+Flow Epoch  380/1000 | loss=0.428267 | LR=6.87e-05
+  [flow] Checkpoint saved at epoch 380
+Flow Epoch  390/1000 | loss=0.428186 | LR=6.73e-05
+  [flow] Checkpoint saved at epoch 390
+Flow Epoch  400/1000 | loss=0.426445 | LR=6.58e-05
+  [flow] Checkpoint saved at epoch 400
+Flow Epoch  410/1000 | loss=0.426872 | LR=6.43e-05
+  [flow] Checkpoint saved at epoch 410
+Flow Epoch  420/1000 | loss=0.425644 | LR=6.28e-05
+  [flow] Checkpoint saved at epoch 420
+Flow Epoch  430/1000 | loss=0.425815 | LR=6.13e-05
+  [flow] Checkpoint saved at epoch 430
+Flow Epoch  440/1000 | loss=0.424213 | LR=5.98e-05
+  [flow] Checkpoint saved at epoch 440
+Flow Epoch  450/1000 | loss=0.424022 | LR=5.82e-05
+  [flow] Checkpoint saved at epoch 450
+Flow Epoch  460/1000 | loss=0.423040 | LR=5.67e-05
+  [flow] Checkpoint saved at epoch 460
+Flow Epoch  470/1000 | loss=0.422212 | LR=5.52e-05
+  [flow] Checkpoint saved at epoch 470
+Flow Epoch  480/1000 | loss=0.422099 | LR=5.36e-05
+  [flow] Checkpoint saved at epoch 480
+Flow Epoch  490/1000 | loss=0.420917 | LR=5.21e-05
+  [flow] Checkpoint saved at epoch 490
+Flow Epoch  500/1000 | loss=0.420274 | LR=5.05e-05
+  [flow] Checkpoint saved at epoch 500
+Flow Epoch  510/1000 | loss=0.420286 | LR=4.89e-05
+  [flow] Checkpoint saved at epoch 510
+Flow Epoch  520/1000 | loss=0.419552 | LR=4.74e-05
+  [flow] Checkpoint saved at epoch 520
+Flow Epoch  530/1000 | loss=0.418678 | LR=4.58e-05
+  [flow] Checkpoint saved at epoch 530
+Flow Epoch  540/1000 | loss=0.417851 | LR=4.43e-05
+  [flow] Checkpoint saved at epoch 540
+Flow Epoch  550/1000 | loss=0.417538 | LR=4.28e-05
+  [flow] Checkpoint saved at epoch 550
+Flow Epoch  560/1000 | loss=0.417412 | LR=4.12e-05
+  [flow] Checkpoint saved at epoch 560
+Flow Epoch  570/1000 | loss=0.416677 | LR=3.97e-05
+  [flow] Checkpoint saved at epoch 570
+Flow Epoch  580/1000 | loss=0.417131 | LR=3.82e-05
+  [flow] Checkpoint saved at epoch 580
+Flow Epoch  590/1000 | loss=0.414895 | LR=3.67e-05
+  [flow] Checkpoint saved at epoch 590
+Flow Epoch  600/1000 | loss=0.415716 | LR=3.52e-05
+  [flow] Checkpoint saved at epoch 600
+Flow Epoch  610/1000 | loss=0.415429 | LR=3.37e-05
+  [flow] Checkpoint saved at epoch 610
+Flow Epoch  620/1000 | loss=0.413243 | LR=3.23e-05
+  [flow] Checkpoint saved at epoch 620
+Flow Epoch  630/1000 | loss=0.413986 | LR=3.08e-05
+  [flow] Checkpoint saved at epoch 630
+Flow Epoch  640/1000 | loss=0.413662 | LR=2.94e-05
+  [flow] Checkpoint saved at epoch 640
+Flow Epoch  650/1000 | loss=0.412691 | LR=2.80e-05
+  [flow] Checkpoint saved at epoch 650
+Flow Epoch  660/1000 | loss=0.412944 | LR=2.67e-05
+  [flow] Checkpoint saved at epoch 660
+Flow Epoch  670/1000 | loss=0.411502 | LR=2.53e-05
+  [flow] Checkpoint saved at epoch 670
+Flow Epoch  680/1000 | loss=0.411722 | LR=2.40e-05
+  [flow] Checkpoint saved at epoch 680
+Flow Epoch  690/1000 | loss=0.411790 | LR=2.27e-05
+  [flow] Checkpoint saved at epoch 690
+Flow Epoch  700/1000 | loss=0.410498 | LR=2.14e-05
+  [flow] Checkpoint saved at epoch 700
+Flow Epoch  710/1000 | loss=0.410187 | LR=2.02e-05
+  [flow] Checkpoint saved at epoch 710
+Flow Epoch  720/1000 | loss=0.409751 | LR=1.89e-05
+  [flow] Checkpoint saved at epoch 720
+Flow Epoch  730/1000 | loss=0.409609 | LR=1.78e-05
+  [flow] Checkpoint saved at epoch 730
+Flow Epoch  740/1000 | loss=0.409732 | LR=1.66e-05
+  [flow] Checkpoint saved at epoch 740
+Flow Epoch  750/1000 | loss=0.409177 | LR=1.55e-05
+  [flow] Checkpoint saved at epoch 750
+Flow Epoch  760/1000 | loss=0.408275 | LR=1.44e-05
+  [flow] Checkpoint saved at epoch 760
+Flow Epoch  770/1000 | loss=0.407660 | LR=1.34e-05
+  [flow] Checkpoint saved at epoch 770
+Flow Epoch  780/1000 | loss=0.408729 | LR=1.24e-05
+  [flow] Checkpoint saved at epoch 780
+Flow Epoch  790/1000 | loss=0.408560 | LR=1.14e-05
+  [flow] Checkpoint saved at epoch 790
+Flow Epoch  800/1000 | loss=0.407637 | LR=1.05e-05
+  [flow] Checkpoint saved at epoch 800
+Flow Epoch  810/1000 | loss=0.408492 | LR=9.56e-06
+  [flow] Checkpoint saved at epoch 810
+Flow Epoch  820/1000 | loss=0.406729 | LR=8.71e-06
+  [flow] Checkpoint saved at epoch 820
+Flow Epoch  830/1000 | loss=0.406954 | LR=7.89e-06
+  [flow] Checkpoint saved at epoch 830
+Flow Epoch  840/1000 | loss=0.407553 | LR=7.12e-06
+  [flow] Checkpoint saved at epoch 840
+Flow Epoch  850/1000 | loss=0.407136 | LR=6.40e-06
+  [flow] Checkpoint saved at epoch 850
+Flow Epoch  860/1000 | loss=0.406966 | LR=5.71e-06
+  [flow] Checkpoint saved at epoch 860
+Flow Epoch  870/1000 | loss=0.406713 | LR=5.07e-06
+  [flow] Checkpoint saved at epoch 870
+Flow Epoch  880/1000 | loss=0.406433 | LR=4.48e-06
+  [flow] Checkpoint saved at epoch 880
+Flow Epoch  890/1000 | loss=0.406531 | LR=3.93e-06
+  [flow] Checkpoint saved at epoch 890
+Flow Epoch  900/1000 | loss=0.406574 | LR=3.42e-06
+  [flow] Checkpoint saved at epoch 900
+Flow Epoch  910/1000 | loss=0.406216 | LR=2.97e-06
+  [flow] Checkpoint saved at epoch 910
+Flow Epoch  920/1000 | loss=0.406034 | LR=2.56e-06
+  [flow] Checkpoint saved at epoch 920
+Flow Epoch  930/1000 | loss=0.405676 | LR=2.19e-06
+  [flow] Checkpoint saved at epoch 930
+Flow Epoch  940/1000 | loss=0.405422 | LR=1.88e-06
+  [flow] Checkpoint saved at epoch 940
+Flow Epoch  950/1000 | loss=0.405972 | LR=1.61e-06
+  [flow] Checkpoint saved at epoch 950
+Flow Epoch  960/1000 | loss=0.406328 | LR=1.39e-06
+  [flow] Checkpoint saved at epoch 960
+Flow Epoch  970/1000 | loss=0.404994 | LR=1.22e-06
+  [flow] Checkpoint saved at epoch 970
+Flow Epoch  980/1000 | loss=0.405169 | LR=1.10e-06
+  [flow] Checkpoint saved at epoch 980
+Flow Epoch  990/1000 | loss=0.405546 | LR=1.02e-06
+  [flow] Checkpoint saved at epoch 990
+Flow Epoch 1000/1000 | loss=0.406022 | LR=1.00e-06
+  [flow] Checkpoint saved at epoch 1000
+  [flow] All checkpoints deleted.
+Sampling 8 jets for scatter visualisation...
+
+Generating 25000 jets for distribution comparison...
+Distribution plot saved: dist_comparison_model15.png
+
+--- Reconstruction W1 metrics (10 jets) ---
+  Reconstruction W1:  η=0.0087  φ=0.0095  pT=0.0009
+
+Pipeline V5 Model 15 complete.

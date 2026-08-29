@@ -1,0 +1,23 @@
+# Exclude heavy model artifacts
+**/weights/
+**/checkpoints/
+
+# Exclude Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Exclude slurm output/error files
+slurm-*.out
+slurm-*.err
+**/slurm-*.out
+**/slurm-*.err
+
+# Exclude other version folders (only committing v_15 and v_15.2)
+v_15.1-sinkhorn_set2set_finetune/
+v_15.3-sinkhorn_set2set/
+
+# Exclude root-level scripts (not part of the experiment folders)
+run_job.sh
+run_job_debug.sh
+requirements.txt

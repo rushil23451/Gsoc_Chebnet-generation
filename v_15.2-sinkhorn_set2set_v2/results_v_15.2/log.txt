@@ -1,0 +1,4 @@
+=== Model15 v2: from scratch | eta/phi ±2, STE-pT, count-loss ===
+
+Device: cuda
+GPU: NVIDIA A100-SXM4-40GB
